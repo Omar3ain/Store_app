@@ -1,6 +1,6 @@
 <div class="flex">
     <mat-card class="example-card" *ngFor="let product of productsList">
-        <img mat-card-image src="{{product.url}}" alt="Photo of Product" class="product_image">
+        <img [routerLink]="['/product-item-detials',product.id]"  mat-card-image src="{{product.url}}" alt="Photo of Product" class="product_image">
         <mat-card-content class="center">
           <p >
             {{product.name}}
@@ -8,7 +8,7 @@
           <p >{{product.price}} $</p>
         </mat-card-content>
         <mat-card-actions class="center">
-    <select name="" id="count">
+    <select name="count" id="count">
         <option value="1">1</option>    
         <option value="2">2</option>
         <option value="3">3</option>

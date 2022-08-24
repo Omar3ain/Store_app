@@ -12,6 +12,7 @@
       height: 60%;
       padding: 20px;
       margin: 0px  !important;
+      cursor: pointer;
     }
     p{
       font-family: 'Archivo Narrow', sans-serif;
