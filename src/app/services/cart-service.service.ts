@@ -19,7 +19,7 @@ export class CartServiceService {
       this.items.push(item);
     }
     else {
-      this.items[index].quantity = Number(this.items[index].quantity) + Number(item.quantity);
+      this.items[index].quantity = +this.items[index].quantity + +item.quantity;
     }
     return this.items;
   }

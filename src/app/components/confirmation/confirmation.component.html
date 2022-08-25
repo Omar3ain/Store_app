@@ -1,1 +1,14 @@
-<p>confirmation works!</p>
+<div class="flex">
+<mat-card style="width: 50%; text-align: center;">
+    <mat-card-title>Success!!</mat-card-title>
+    <mat-card-subtitle>Thank you for<strong> {{fullname}} </strong> ordering</mat-card-subtitle>
+    <mat-card-content>
+        <p>
+          Your ordered some products  with total $ {{totalPrice}}
+        </p>
+      </mat-card-content>
+    <mat-card-actions>
+      <button [routerLink]="['/']" (click)="resetCart()"  mat-button>Back to Product List</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

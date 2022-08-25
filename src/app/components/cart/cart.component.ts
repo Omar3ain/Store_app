@@ -1,4 +1,4 @@
-import { Component, OnInit , Output } from '@angular/core';
+import { Component, EventEmitter, OnInit , Output } from '@angular/core';
 import  CartItem  from '../../models/CartItemModel';
 import { CartServiceService } from 'src/app/services/cart-service.service';
 
@@ -10,7 +10,7 @@ import { CartServiceService } from 'src/app/services/cart-service.service';
 export class CartComponent implements OnInit {
 
   cartItems : CartItem[] = []
-  @Output() fullName: string = ''
+  fullName : string = '';
   address: string = ''
   creditCard: string = ''
   totalPrice: number = 0
@@ -26,11 +26,15 @@ export class CartComponent implements OnInit {
     this.cartItems = [];
   }
 
-  updateQuantity(): void {
+  updatePrice(): void {
     this.totalPrice = this.cartService.getTotalPrice();
   }
   onSubmit() : void {
-    this.totalPrice = this.cartService.getTotalPrice();
-  }
+    this.totalPrice = this.cartService.getTotalPrice()
 
+  }
+  restForm(){
+    localStorage.setItem('fullname' , this.fullName);
+    
+  }
 }
