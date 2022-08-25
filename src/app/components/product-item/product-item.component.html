@@ -1,1 +1,15 @@
-<p>product-item works!</p>
+<mat-card class="example-card">
+    <img [routerLink]="['/product-item-detials',productsList.id]"  mat-card-image src="{{productsList.url}}" alt="Photo of Product" class="product_image">
+    <mat-card-content class="center">
+      <p >
+        {{productsList.name}}
+      </p>
+      <p >{{productsList.price}} $</p>
+    </mat-card-content>
+    <mat-card-actions class="center">
+      <select id="count" [(ngModel)]="quantity">
+        <option *ngFor="let quantity of quantities" [value]="quantity">{{quantity}}</option>
+    </select> <br>
+      <button mat-button class="buttonStyle" (click)="addItem(productsList)">Add To Cart</button>
+    </mat-card-actions>
+  </mat-card>

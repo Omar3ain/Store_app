@@ -1,21 +1,60 @@
-.product-image {      
-    list-style-type: none;
-    width: 290px;
-    padding: 20px;
-    margin: 6px 6px;        
-    border: 1px solid #33B5E5;
-  } 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 50px;
+}
+.product_image{
+  border : 1px solid #33B5E5;
+  width: 80%;
+  height: 60%;
+  padding: 20px;
+  margin: 0px  !important;
+  cursor: pointer;
+}
+p{
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 30px;
+
+}
+.product-container {
+  display: flex;
+  justify-content: center;
+}
+.example-card {
+  max-width: 400px;
+  margin-right: -35px  !important;
+  margin: 15px;
+  box-shadow: 9px 10px 10px 1px rgba(0, 0, 0, 0.19);
   
-  .product-container {
-    margin-top: 64px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .select-input {
-    width: 108px; 
-    margin-bottom: 8px;
-  }
+}
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+  right: 16px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+.buttonStyle{
+  padding: 8px 12px;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: 'Archivo Narrow', sans-serif;
+  background-color: #207696;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#count {
+  padding: 8px 26px;
+  border-radius: 5px;
+  margin-bottom: -15px;
+}

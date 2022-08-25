@@ -13,6 +13,7 @@ import { ProductItemDetailsComponent } from './components/product-item-details/p
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule 
   ],
   providers: [GetDataService],
   bootstrap: [AppComponent]
